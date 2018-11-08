@@ -2,7 +2,6 @@ import { Component, OnInit, AfterViewInit, Renderer, ElementRef } from '@angular
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { ActivatedRoute } from '@angular/router';
 
-import { LoginModalService } from 'app/core';
 import { PasswordResetFinishService } from './password-reset-finish.service';
 
 @Component({
@@ -21,7 +20,6 @@ export class PasswordResetFinishComponent implements OnInit, AfterViewInit {
 
     constructor(
         private passwordResetFinishService: PasswordResetFinishService,
-        private loginModalService: LoginModalService,
         private route: ActivatedRoute,
         private elementRef: ElementRef,
         private renderer: Renderer
@@ -59,7 +57,4 @@ export class PasswordResetFinishComponent implements OnInit, AfterViewInit {
         }
     }
 
-    login() {
-        this.modalRef = this.loginModalService.open();
-    }
 }

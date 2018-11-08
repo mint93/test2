@@ -11,7 +11,8 @@ import {
     PasswordResetInitComponent,
     PasswordResetFinishComponent,
     SettingsComponent,
-    accountState
+    accountState,
+    JhiLoginModalComponent
 } from './';
 
 @NgModule({
@@ -23,7 +24,8 @@ import {
         PasswordStrengthBarComponent,
         PasswordResetInitComponent,
         PasswordResetFinishComponent,
-        SettingsComponent
+        SettingsComponent,
+        JhiLoginModalComponent
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

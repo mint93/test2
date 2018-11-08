@@ -3,8 +3,8 @@ import { Router } from '@angular/router';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { JhiEventManager } from 'ng-jhipster';
 
-import { LoginService } from 'app/core/login/login.service';
-import { JhiLoginModalComponent } from 'app/shared/login/login.component';
+import { LoginService } from 'app/account/login/login.service';
+import { JhiLoginModalComponent } from 'app/account/login/login.component';
 import { StateStorageService } from 'app/core/auth/state-storage.service';
 import { OrderWithMeTestModule } from '../../../test.module';
 import { MockLoginService } from '../../../helpers/mock-login.service';

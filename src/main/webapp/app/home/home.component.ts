@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { JhiEventManager } from 'ng-jhipster';
 
-import { LoginModalService, Principal, Account } from 'app/core';
+import { Principal, Account } from 'app/core';
 
 @Component({
     selector: 'jhi-home',
@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
     account: Account;
     modalRef: NgbModalRef;
 
-    constructor(private principal: Principal, private loginModalService: LoginModalService, private eventManager: JhiEventManager) {}
+    constructor(private principal: Principal, private eventManager: JhiEventManager) {}
 
     ngOnInit() {
         this.principal.identity().then(account => {
@@ -34,7 +34,4 @@ export class HomeComponent implements OnInit {
         return this.principal.isAuthenticated();
     }
 
-    login() {
-        this.modalRef = this.loginModalService.open();
-    }
 }

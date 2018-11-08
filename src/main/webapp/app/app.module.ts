@@ -16,12 +16,14 @@ import { OrderWithMeAppRoutingModule } from './app-routing.module';
 import { OrderWithMeHomeModule } from './home/home.module';
 import { OrderWithMeAccountModule } from './account/account.module';
 import { OrderWithMeEntityModule } from './entities/entity.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ActiveMenuDirective, ErrorComponent } from './layouts';
 
 @NgModule({
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         OrderWithMeAppRoutingModule,
         Ng2Webstorage.forRoot({ prefix: 'jhi', separator: '-' }),
         OrderWithMeSharedModule,
