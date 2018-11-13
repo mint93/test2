@@ -5,10 +5,10 @@ import { LoginService } from '../login/login.service';
 import { StateStorageService } from '../../core/auth/state-storage.service';
 
 @Component({
-    selector: 'jhi-login-modal',
+    selector: 'jhi-login',
     templateUrl: './login.component.html'
 })
-export class JhiLoginModalComponent implements AfterViewInit {
+export class JhiLoginComponent implements AfterViewInit {
     authenticationError: boolean;
     password: string;
     rememberMe: boolean;

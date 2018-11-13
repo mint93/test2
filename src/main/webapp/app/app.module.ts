@@ -19,6 +19,8 @@ import { OrderWithMeEntityModule } from './entities/entity.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ActiveMenuDirective, ErrorComponent } from './layouts';
+import { JhiAppComponent } from './app.component';
+import { JhiLoginRegisterComponent } from 'app/layouts/login/login-register.component';
 
 @NgModule({
     imports: [
@@ -33,7 +35,7 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
         OrderWithMeEntityModule
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
-    declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
+    declarations: [JhiMainComponent, JhiLoginRegisterComponent, JhiAppComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
     providers: [
         {
             provide: HTTP_INTERCEPTORS,
@@ -60,6 +62,6 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
             deps: [Injector]
         }
     ],
-    bootstrap: [JhiMainComponent]
+    bootstrap: [JhiAppComponent]
 })
 export class OrderWithMeAppModule {}
